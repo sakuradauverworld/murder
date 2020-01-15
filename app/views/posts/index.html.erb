@@ -11,7 +11,6 @@
     <% @posts.each do |post| %>
     <div class="content_post" style="background-image: url(<%= post.image %>);">
     <div class="name"><%= post.name %></div>
-    <%= simple_format(post.text) %>
     <%= link_to("レビューを見る", "/posts/#",class: "show") %>
     </div>
     <% end %>
