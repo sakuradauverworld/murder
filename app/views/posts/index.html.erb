@@ -1,17 +1,19 @@
 <div class="about">
-<h1>マーダーミステリーの世界へようこそ</h1>
-<p>このサイトはマーダーミステリーの感想を自由に述べてもらうことができます。ネタバレは厳禁です。<p>
-<h2>マーダーミステリーとは？</h2>
-<p>マーダーミステリーとは推理ゲームの一種であらかじめ殺人事件などのミステリーのシナリオが決められており、プレーヤーが登場人物を演じて犯人を見つける（犯人役の場合は逃げ切る）ことを主な目的とするゲームである。
-シナリオが決められているので各タイトルを一生に一度しかプレイできない。</p>
+<h1 class="h1">マーダーミステリーの世界へようこそ</h1>
+<p>このサイトはマーダーミステリーの感想を自由に述べてもらうことができます。ネタバレは<span class="prohibition">厳禁</span>です<p>
+<h2 class="h2">マーダーミステリーとは？</h2>
+<p>マーダーミステリーとは推理ゲームの一種であらかじめ殺人事件などのミステリーのシナリオが決められており、</p>
+<P>プレーヤーが登場人物を演じて犯人を見つける（犯人役の場合は逃げ切る）ことを主な目的とするゲームである。</p>
+<p>シナリオが決められているので各タイトルを一生に一度しかプレイできない。</p>
 </div>
-<div>オフライン</div>
-<div class="contents" >
-<% @posts.each do |post| %>
-  <div class="content_post" style="background-image: url(<%= post.image %>);">
-  <span class="name"><%= post.name %></span>
-  <%= simple_format(post.text) %>
-  <%= link_to("レビューを見る", "/posts/#") %>
+<div class="main">
+  <div class="contents" >
+    <% @posts.each do |post| %>
+    <div class="content_post" style="background-image: url(<%= post.image %>);">
+    <div class="name"><%= post.name %></div>
+    <%= simple_format(post.text) %>
+    <%= link_to("レビューを見る", "/posts/#",class: "show") %>
+    </div>
+    <% end %>
   </div>
-<% end %>
 </div>

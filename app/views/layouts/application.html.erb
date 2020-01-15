@@ -11,8 +11,8 @@
 
   <body>
   <div class="header">
-  <div class="logo">マーダーミステリー口コミサイト マダミス！</div>
-  <div class="new">ここにないマーダーミステリーを紹介する</div>
+  <%= link_to "マーダーミステリー口コミサイト マダミス！","/",class: "logo" %>
+  <%= link_to "ここにないマーダーミステリーを紹介する","/posts/new",class: "new" %>
   </div>
     <%= yield %>
   </body>
