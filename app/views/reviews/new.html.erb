@@ -1,0 +1,6 @@
+ <%= form_tag('/reviews/create',{multipart: true}) do %>
+<input placeholder="ニックネーム" type="string" name="nickname">
+<input  type="integer" name="rate">
+<textarea name="review" rows="4" cols="40" type="text">ここに感想を記入してください。</textarea>
+<input type="submit" value="SENT">
+<%end%>

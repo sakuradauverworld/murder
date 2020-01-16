@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+
   def index
     @posts = Post.all
   end
@@ -20,8 +21,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
-  end
+    @reviews = Review.all
 
+  end
  
 
  
