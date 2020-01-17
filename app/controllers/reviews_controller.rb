@@ -5,9 +5,10 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @reviews = Review.create(nickname: params[:nickname],rate: params[:rate],review: params[:review] ,post_id: params[:post_id])
+    @reviews = Review.create(nickname: params[:nickname],rate: params[:rate],review: params[:review]  )
+    @post = Post.find_by(id: params[:id])
    if @reviews.save
-    redirect_to "/" 
+    redirect_to('/')
    end
   
   end

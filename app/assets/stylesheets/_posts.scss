@@ -29,16 +29,17 @@
 }
 
 .main{
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-image: url("main.jpg");
 }
 .new{
   text-align: right;
   padding-top: 20px;
-  color: white;
+  color: cornflowerblue;
   float: right;
   text-decoration: none;
+  margin-right: 5px;
 }
 
 .about{
