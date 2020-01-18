@@ -1,21 +1,17 @@
 class ReviewsController < ApplicationController
 
   def new
-    @post = Post.new
+    @post = Post.find(params[:post_id])
+    @review = Review.new
   end
 
   def create
-    @reviews = Review.create(nickname: params[:nickname],rate: params[:rate],review: params[:review]  )
-    @post = Post.find_by(id: params[:id])
-   if @reviews.save
+    Review.create(create_params)
     redirect_to('/')
-   end
-  
-  end
-
-  def show
-    @post = Post.find_by(id: params[:id])
-    @reviews = Review.all
   end
   
+  private
+  def create_params
+    params.require(:review).permit(:nickname, :rate, :review).merge(post_id: params[:post_id])
+  end
 end
