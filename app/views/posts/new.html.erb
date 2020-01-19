@@ -1,11 +1,19 @@
-<div class="contents row">
+<div class="post__new">
+<div class="new__main">
   <%= form_tag('/posts/create',{multipart: true}) do %>
     <h3>
       投稿する
     </h3>
-    <input placeholder="タイトル" type="text" name="name">
-    <input placeholder="Image Url" type="file" name="image">
+    <p>
+      <input placeholder="タイトル" type="text" name="name">
+    </p>
+    <label class="file__dec" >クリックで画像選択
+      <input class="file"type="file" name="image">
+    </label>
+    <p>
     <input type="submit" value="SENT">
+    </p>
   <% end %>
+</div>
 </div>
 

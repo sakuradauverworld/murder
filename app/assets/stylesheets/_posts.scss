@@ -91,4 +91,28 @@
   font-size: 100px;
   color: red;
 }
+.show__main{
 
+  color: aliceblue;
+}
+
+.post__new{
+  width: 100vw;
+  height: 100vw;
+  background-color: blanchedalmond;
+}
+.new__main{
+  text-align: center;
+  font-size: 25px;
+}
+
+.file__dec{
+  background: #ffffff;
+  color: #333333;
+  cursor: pointer;
+  padding: 15px 70px;
+  display: inline-block;
+}
+.file{
+  display: none;
+}

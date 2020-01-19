@@ -1,8 +1,0 @@
-  <div class="show_main">
-  <h1 class="show_title"><%= @post.name %></h1>
-  <div class="content_post" style="background-image: url(<%= @post.image %>);">
-  </div>
-  <a href="/posts/<%= @post.id %>/reviews/new"class="review_link">この作品をレビューする</a>
-   <% @reviews.each do |review| %>
-   <div class="review"><%= review.review %></div>
-   <%end%>

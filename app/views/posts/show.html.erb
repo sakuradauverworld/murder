@@ -2,7 +2,16 @@
   <h1 class="show_title"><%= @post.name %></h1>
   <div class="content_post" style="background-image: url(<%= @post.image %>);">
   </div>
-  <a href="/posts/<%= @post.id %>/reviews/new"class="review_link">この作品をレビューする</a>
-   <% @reviews.each do |review| %>
-   <div class="review"><%= review.review %></div>
-   <%end%>
+  <a href="/reviews/new?post_id=<%= @post.id %> "class="review_link">この作品をレビューする</a>
+ 
+
+  <ul  class="show__main">
+  <% @post.reviews.each do |review| %>
+  <li style="border-bottom: dotted 1px">
+  <%= review.nickname %>
+  <p>評価<%= review.rate %></p>
+  <%= review.review %>
+  </li>
+  <% end %>
+  </ul>
+  
