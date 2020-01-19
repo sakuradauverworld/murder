@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
-  before_action :move_to_index, except: :index
-
+  before_action :authenticate_user,{only:[:new,:create]}
   def index
     @posts = Post.order("created_at DESC").page(params[:page]).per(5)
   end
@@ -25,8 +24,7 @@ class PostsController < ApplicationController
     @reviews = Review.all
   end
  
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
-  end
+ 
+  
  
 end
