@@ -21,9 +21,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
+    @post = Post.find(params[:post_id])
     @reviews = Review.all
-
   end
  
   def move_to_index

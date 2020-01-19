@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'posts/:id' => 'posts#show'
   post 'posts/:id' => 'posts#show'
   post 'reviews/create' => 'reviews#create'
+  get '/posts/:post_id/reviews' => 'posts#show',as: :show
   get 'reviews/new' => 'reviews#new'
   resources :posts, only: :show do
     resources :reviews, only: [:new, :create]
