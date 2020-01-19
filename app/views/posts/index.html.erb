@@ -11,7 +11,7 @@
     <% @posts.each do |post| %>
     <div class="content_post" style="background-image: url(<%= post.image %>);">
     <div class="name"><%= post.name %></div>
-    <%= link_to"レビュー",show_path(post.id) %>
+    <%= link_to"レビューを見る",show_path(post.id),{class: :"show",} %>
     </div>
     <% end %>
     <%= paginate(@posts) %>
