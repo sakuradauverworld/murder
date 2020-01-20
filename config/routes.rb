@@ -14,4 +14,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  resources :posts  
+  resources :users  
 end

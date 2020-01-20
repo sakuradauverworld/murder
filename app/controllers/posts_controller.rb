@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user,{only:[:new,:create]}
+  before_action :move_to_index, only: [:new, :create]
   def index
     @posts = Post.order("created_at DESC").page(params[:page]).per(5)
   end
@@ -21,10 +21,9 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:post_id])
-    @reviews = Review.all
   end
  
- 
   
+
  
 end
