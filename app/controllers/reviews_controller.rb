@@ -6,8 +6,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
+
     @post = Post.find(params[:post_id])
     @review = Review.create(create_params)
+    @review = Review.create(rate: create_params[:rate], review: create_params[:review], post_id: params[:post_id], user_id: current_user.id)
+  
     if @review.save
       redirect_to show_path(@post)
     end
@@ -15,6 +18,6 @@ class ReviewsController < ApplicationController
 
   private
   def create_params
-    params.require(:review).permit(:nickname, :rate, :review).merge(post_id: params[:post_id])
+    params.require(:review).permit(:rate, :review)
   end
 end
