@@ -5,7 +5,11 @@
 遊んだことがある作品を紹介できたりレビューできたりします。
 
 ***DEMO:***
+作品紹介
+https://gyazo.com/20a299e7d42e081dfaec3f3b01b1b118
 
+レビュー投稿
+https://gyazo.com/ed0cec9c8847a1a4b753407db0be0a32
 
  ## Features
 
