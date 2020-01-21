@@ -30,7 +30,7 @@
 
 .main{
   width: 100vw;
-  height:100vw;
+  height:100%;
   background-image: url("/main.jpg");
 }
 .new{
@@ -115,9 +115,7 @@
   padding: 15px 70px;
   display: inline-block;
 }
-.file{
-  display: none;
-}
+
 
 .reviews__new__main{
  text-align: center;
@@ -127,12 +125,27 @@
  background-color: blanchedalmond;
 }
 
-.nickname{
-  margin-top: 20px;
-}
-
 #review_review{
   height: 200px;
   width: 380px;
   margin-top: 20px;
+}
+
+.nickname{
+  float: left;
+  margin-right: 5px;
+ margin-left: 10px;
+}
+
+.review_review{
+  padding-top: 5px;
+  margin-left: 10px;
+}
+
+.average{
+  background-color: #FF0080;
+}
+
+.review_link{
+  margin-left: 7px;
 }
