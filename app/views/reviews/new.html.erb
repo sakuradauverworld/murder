@@ -1,6 +1,5 @@
 <%= form_for [@post, @review] do |f| %>
   <div class="reviews__new__main">
-    <%= f.text_field :nickname, placeholder: 'ニックネーム',class: "nickname" %>
     <%= f.label :評価, style: { 'margin-right' => 8 } %>
     <%= f.number_field :rate, placeholder: '評価', value: 1, max: 5, min: 1, html: { style: 'text-align: right;' } ,class: "rate"%>
     <br>
