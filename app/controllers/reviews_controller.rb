@@ -13,6 +13,9 @@ class ReviewsController < ApplicationController
   
     if @review.save
       redirect_to show_path(@post)
+    else
+      flash[:notice] = "入力してください"
+      render :new
     end
   end
 

@@ -13,12 +13,14 @@
   <% end %>
   <ul  class="show__main">
   <% @post.reviews.each do |review| %>
-  <li style="border-bottom: dotted 1px">
-  <%= review.user.nickname %>
-  <p>評価<%= review.rate %></p>
-  <%= review.review %>
+  <li class="show_border"style="border-bottom: solid 1px">
+  <div class="nickname"><%= review.user.nickname %>さん</div>
+  <div class="rate">評価<%= review.rate %></div>
+  <div class="review_review"><%= review.review %></div>
   </li>
   <% end %>
   </ul>
+
+
 
 

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :move_to_index, only: [:new, :create]
   def index
-    @posts = Post.order("created_at DESC").page(params[:page]).per(5)
+    @post = Post.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
@@ -10,11 +10,11 @@ class PostsController < ApplicationController
 
 
   def create
-   @posts = Post.create(name: params[:name], image: params[:image])
+   @posts = Post.create(name: params[:name], image: params[:image],user_id: current_user.id)
     if@posts.save
-      flash[:notice] = "投稿完了"
       redirect_to ("/")
     else
+      flash[:notice] = "入力してください"
       render("posts/new")
     end
   end
@@ -22,6 +22,5 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:post_id])
   end
- 
  
 end
