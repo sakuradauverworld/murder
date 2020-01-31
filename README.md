@@ -13,10 +13,8 @@ https://gyazo.com/ed0cec9c8847a1a4b753407db0be0a32
 
  ## Features
 
-- HAML/SASS記法とBEMの命名規則に基づいたマークアップ
+- HTML/SASS記法とBEMの命名規則に基づいたマークアップ
 - AWS EC2へのデプロイ
-- ActiveStorageを使用しAWS S3への画像アップロード
-- pay.jpによる購入処理
 - gem-kaminariを使用したページネーション機能
 - gem-deviseを使用したログイン機能
 - Jqueryでのフロント実装
