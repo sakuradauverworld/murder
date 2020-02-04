@@ -1,7 +1,7 @@
 .header{
   height: 70px;
   width: 100%;
-  background-color: #333333; 
+  background-color: #324851;
 }
 .h1{
   font-weight: bold;
@@ -31,7 +31,7 @@
 .main{
   width: 100vw;
   height:100%;
-  background-image: url("/main.jpg");
+  background-image: url("/壁.jpeg");
 }
 .new{
   text-align: right;
@@ -83,17 +83,14 @@
 .show_main{
   height: 1000px;
   width: 100%;
-  background-image: url("/main.jpg");
+  background-image: url("/壁.jpeg");
+  font-size: 20px;
 }
 
 .show_title{
   text-align: center;
   font-size: 100px;
   color: red;
-}
-.show__main{
-
-  color: aliceblue;
 }
 
 .post__new{
@@ -148,4 +145,21 @@
 
 .review_link{
   margin-left: 7px;
+}
+
+.post_destroy{
+  text-decoration: none;
+  color: #FF8C00;
+  position: absolute;
+  bottom: 0;
+  text-indent: 350px;
+}
+
+.review_edit{
+text-decoration: none;
+margin-left: 10px;
+}
+
+.review_destroy{
+text-decoration: none;
 }
