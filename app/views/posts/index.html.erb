@@ -12,6 +12,9 @@
     <div class="content_post" style="background-image: url(<%= post.image %>);">
     <div class="name"><%= post.name %></div>
     <%= link_to"レビューを見る",show_path(post.id),{class: :"show",} %>
+    <% if user_signed_in? && current_user.id == post.user_id %>
+    <%= link_to"削除","/posts/#{post.id}/destroy",method: :post,class: :"post_destroy" %>
+     <% end %>
     </div>
     <% end %>
     <%= paginate(@post) %>
