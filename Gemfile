@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'sqlite3' 
 end
 
 group :development do
@@ -75,6 +76,9 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'kaminari'  
 
-group :production do
-  gem 'unicorn', '5.4.1'
-end
+# group :production do
+#   # gem 'unicorn', '5.4.1'
+#   gem 'pg'
+# end
+
+gem 'pg', '~> 0.19.0', group: :production
