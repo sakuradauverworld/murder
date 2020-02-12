@@ -19,7 +19,7 @@
   <div class="review_review"><%= review.review %></div>
    <% if user_signed_in? && current_user.id == review.user_id %>
    <%= link_to"編集",edit_review_path(review.id),{class: :"review_edit",} %>
-   <%= link_to"削除","/reviews/#{review.id}/destroy",method: :post,class: :"review_destroy" %>
+   <%= link_to"削除","/reviews/#{review.id}",method: :delete,class: :"review_destroy" %>
    <% end %>
   </li>
   <% end %>

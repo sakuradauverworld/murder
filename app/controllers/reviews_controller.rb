@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
     if review.user_id == current_user.id
     review.review = params[:review]
     review.save
-    redirect_back(fallback_location: post_path)
+    redirect_to ("/")
     end
   end
 

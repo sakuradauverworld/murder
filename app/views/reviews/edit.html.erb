@@ -1,4 +1,8 @@
-<%= form_tag("/reviews/#{@review.id}/update")do%>
-<textarea name="review"><%= @review.review%></textarea>
+<div class="post__new">
+<div class="new__main">
+<%= form_tag("/reviews/#{@review.id}",method: :patch)do%>
+<textarea name="review"cols="30" rows="10"><%= @review.review%></textarea>
 <input type="submit" value="保存">
 <%end%>
+</div>
+</div>
